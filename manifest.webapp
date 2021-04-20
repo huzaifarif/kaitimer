@@ -1,0 +1,57 @@
+{
+  "version": "0.1.0",
+  "name": "KaiTimer",
+  "description": "A basic timer app for KaiOS",
+  "launch_path": "/index.html",
+  "icons": {
+    "16": "/assets/icons/icon16x16.png",
+    "48": "/assets/icons/icon48x48.png",
+    "60": "/assets/icons/icon60x60.png",
+    "128": "/assets/icons/icon128x128.png"
+  },
+  "developer": {
+    "name": "Huzaifa Arif",
+    "url": "https://huzaifa.dev"
+  },
+  "type": "privileged",
+  "cursor": true,
+  "messages": [
+    { "push": "/index.html" },
+    { "push-register": "/index.html" },
+    { "notification": "/index.html" },
+    { "serviceworker-notification": "/index.html" }
+  ],
+  "permissions": {
+    "desktop-notification": {
+      "description": "Needed for creating system notifications."
+    },
+    "push": {
+      "description": "Required for notifications"
+    },
+    "serviceworker": {
+      "description": "Needed for assocating service worker"
+    },
+    "systemXHR": {
+      "description": "Required to get something from somewher may be!"
+    },
+    "device-storage:sdcard": {
+      "description": "Trying to get storage accesson an emulator"
+    },
+    "device-storage:pictures": {
+      "description": "Trying to get storage accesson an emulator"
+    }
+  },
+  "installs_allowed_from": [
+    "*"
+  ],
+  "locales": {
+    "en-US": {
+      "name": "KaiTimer",
+      "description": "A basic timer app for KaiOS"
+    }
+  },
+  "default_locale": "en-US",
+  "dependencies": {
+		"ads-sdk": "1.4.1"
+	}
+}

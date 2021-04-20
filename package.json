@@ -1,0 +1,26 @@
+{
+  "name": "kaitimer",
+  "version": "1.0.0",
+  "description": "A basic timer app for KaiOS",
+  "main": "index.html",
+  "scripts": {
+    "start": "parcel index.html --out-dir build --open && cp ./manifest.webapp ./build/ && cp -r ./public/* ./build/",
+    "clean": "rm -rf ./build",
+    "copy": "cp ./manifest.webapp ./build/ && cp ./service-worker.js ./build/ && cp -r ./public/* ./build/",
+    "build": "yarn clean && parcel build index.html --out-dir build --no-source-maps && yarn copy"
+  },
+  "keywords": [
+    "KaiOS",
+    "Timer"
+  ],
+  "author": "Huzaifa Arif",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "7.2.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "parcel-bundler": "^1.6.1",
+    "web-push": "^3.4.4"
+  },
+  "dependencies": {}
+}
